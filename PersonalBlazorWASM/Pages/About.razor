@@ -1,0 +1,205 @@
+﻿@page "/about"
+
+<style>
+    .content {
+        margin-top: 50px;
+        margin-left: 70px;
+    }
+
+    h1 {
+        color: #64ffda;
+        font-family: 'JetBrains Mono';
+        font-size: 50px;
+        text-align: left;
+    }
+
+    h2 {
+        color: #8892b0;
+        font-family: Calibri;
+        font-size: 20px;
+        text-align: left;
+    }
+
+    p {
+        color: #8892b0;
+        font-family: Calibri;
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .container {
+        display: flex;
+        margin-left: -10px;
+    }
+
+    .text-half, .image-half {
+        flex: 1;
+    }
+
+    .text-half {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .image-half {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .image-half img {
+        max-width: 100%;
+        height: auto;
+        filter: brightness(70%);
+        transition: filter 0.3s, transform 0.3s;
+    }
+
+    .image-half img:hover {
+        filter: brightness(100%);
+        transform: scale(1.3); 
+    }
+
+    @@keyframes fadeIn {
+        0% {
+            transform: translateY(0);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .fade-in {
+        animation: fadeIn 1s ease-in-out forwards;
+        opacity: 0;
+    }
+
+    @@keyframes fadeInFromTopMore {
+        0% {
+            transform: translateY(30%);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .fade-in-top-more {
+        animation: fadeInFromTopMore 1s ease-in-out forwards;
+        opacity: 0;
+    }
+
+    @@keyframes fadeInFromTop {
+        0% {
+            transform: translateY(-2%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .fade-in-top {
+        animation: fadeInFromTop 1s ease-in-out forwards;
+        opacity: 0;
+    }
+
+    @@keyframes fadeInFromLeft {
+        0% {
+            transform: translateX(-2%);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    .fade-in-left {
+        animation: fadeInFromLeft 1s ease-in-out forwards;
+        opacity: 0;
+    }
+
+    @@keyframes fadeInFromRight {
+        0% {
+            transform: translateX(2%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    .fade-in-right {
+        animation: fadeInFromRight 1s ease-in-out forwards;
+        opacity: 0;
+    }
+
+    ul li::before {
+        content: "\2023"; /* Unicode for a bullet */
+        color: #64ffda; /* Change the color of the bullet */
+        font-size: 18px; /* Adjust the size of the bullet */
+    }
+
+    .skill-list {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(140px, 200px));
+        gap: 0px 0px;
+        padding: 0px;
+        margin: 0px 0px 0px;
+        overflow: hidden;
+        list-style: none;
+    }
+</style>
+
+<PageTitle>About Me</PageTitle>
+<div class="content">
+    <h1 class="fade-in-right" style="animation-delay: 0s;">About Me</h1>
+    <div class="container">
+        <div class="text-half">
+            <p class="fade-in-top" style="animation-delay: 0.25s;">
+                Hi! My name is Jack Cai, and I'm a driven software developer with a fervent
+                passion for crafting elegant solutions to complex problems. From UI design
+                to graphic design, front end, back end, game development, and automation
+                scripts, I've immersed myself in various facets of software engineering. With
+                an innate ability to swiftly grasp new concepts and technologies, I excel in
+                dynamic environments that prioritize innovation and creativity.
+                <br />
+                <br />
+                My interest in computer programming ignited during the early days of high
+                school, sparked by the captivating world of Minecraft. Witnessing the
+                seamless functionality of plugins within the game, I was mesmerized and
+                eager to delve deeper. Determined to understand the magic behind these
+                plugins, a friend and I embarked on a journey to create our own Minecraft
+                server, complete with custom-written plugins. As our server flourished,
+                attracting nearly 100 peak players, I found myself immersed in the
+                intricacies of Java programming. Through this hands-on experience, I
+                refined my skills and cultivated a deep appreciation for the art of coding.
+            </p>
+        </div>
+        <div class="image-half fade-in-right" style="animation-delay: 0.75s;">
+            <img src="/images/me.jpg" alt="Your Image" width="288" height="512" style="max-width: 100%; max-height: 100%;"/>
+        </div>
+    </div>
+    <p class="fade-in-left" style="animation-delay: 1s;">
+        Here are a some technologies I've been working with:
+    </p>
+    <ul class="skill-list">
+        <li class="fade-in-top-more" style="animation-delay: 1.15s;"><span style="color: #8892b0; font-size: 15px"> Window Forms .NET</span></li>
+        <li class="fade-in-top-more" style="animation-delay: 1.30s;"><span style="color: #8892b0; font-size: 15px"> ASP.NET Blazor</span></li>
+        <li class="fade-in-top-more" style="animation-delay: 1.45s;"><span style="color: #8892b0; font-size: 15px"> Godot Engine 4</span></li>
+        <li class="fade-in-top-more" style="animation-delay: 1.60s;"><span style="color: #8892b0; font-size: 15px"> Django</span></li>
+        <li class="fade-in-top-more" style="animation-delay: 1.75s;"><span style="color: #8892b0; font-size: 15px"> SQL</span></li>
+        <li class="fade-in-top-more" style="animation-delay: 1.90s;"><span style="color: #8892b0; font-size: 15px"> Adobe Photoshop</span></li>
+        <li class="fade-in-top-more" style="animation-delay: 2.05s;"><span style="color: #8892b0; font-size: 15px"> Adobe Premiere Pro</span></li>
+    </ul>
+
+</div>
+
